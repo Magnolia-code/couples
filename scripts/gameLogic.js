@@ -1,4 +1,4 @@
-import { totalTime, stopTimer } from "./timer.js";
+import { stopTimer, totalTime } from "./timer.js";
 import { generateConfetti } from "./confetti.js";
 const confettiArray = generateConfetti(150);
 let totalFlips = 0; 
@@ -85,4 +85,4 @@ function startConfetti() {
     })
   } 
 
-  export { totalFlips, gameLogic }
+  export { gameLogic, totalFlips }
