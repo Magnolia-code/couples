@@ -27,7 +27,7 @@ function createIconsArray(initialCount) {
     return shuffleArray(doubleCards);
 };
 function createCard(flippedIcon) {
-    const template = document.querySelector('#cardTemplate').cloneNode(true).textContent;
+    const template = document.querySelector('#cardTemplate').cloneNode(true).content;
 
     const card = template.querySelector('.card');
     card.querySelector('#flippedIcon').classList.add(`fa-${flippedIcon}`);
