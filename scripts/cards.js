@@ -1,5 +1,14 @@
 import { gameLogic } from "./gameLogic.js";
+function createCard(flippedIcon) {
+    const template = document.querySelector('#cardTemplate').cloneNode(true).content;
 
+    const card = template.querySelector('.card');
+    card.querySelector('#flippedIcon').classList.add(`fa-${flippedIcon}`);
+    card.addEventListener("click", () => 
+        gameLogic(card)
+    );
+    return card;
+}
 function createIconsArray(initialCount) {
     const cardsIcons = [
         "compass",
@@ -26,23 +35,6 @@ function createIconsArray(initialCount) {
     const doubleCards = dublicateElements(cards);
     return shuffleArray(doubleCards);
 };
-function createCard(flippedIcon) {
-    const template = document.querySelector('#cardTemplate').cloneNode(true).content;
-
-    const card = template.querySelector('.card');
-    card.querySelector('#flippedIcon').classList.add(`fa-${flippedIcon}`);
-    card.addEventListener("click", () => 
-        gameLogic(card)
-    );
-    return card;
-}
-function dublicateElements(array) {
-    const newArr = [];
-    array.forEach((item) => {
-        newArr.push(item, item);
-      });
-      return newArr;
-}
 
 function shuffleArray(array) {
     let currentIndex = array.length;
@@ -63,4 +55,12 @@ function shuffleArray(array) {
       return array 
     }
 
-    export { createIconsArray, createCard }
+function dublicateElements(array) {
+    const newArr = [];
+    array.forEach((item) => {
+        newArr.push(item, item);
+      });
+      return newArr;
+}
+
+    export { createCard, createIconsArray }
