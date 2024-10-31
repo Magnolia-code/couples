@@ -16,7 +16,8 @@ startButton.addEventListener("click", (event) => {
   if (columns >= 2 && columns <= 6 && columns % 2 == 0) {
     count = columns * columns;
   } else {
-    input.value = 4;
+    alert(2, 4, 6);
+    restart;
   }
   createBoard(count, columns);
 });
