@@ -70,29 +70,7 @@ body {
   border: 2px solid black;
 }
 
-/* Кнопка "Начать" */
-.board__button  {
-  width: 100%;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: #fff;
-  color:#000;
-  border-radius: 40px;
-  padding: 20px;
-  cursor: pointer;
-}
-
-/* Состояние наведения курсора мыши на кнопку */
-.board__button:hover{
-  color: rgba(181, 13, 181, 0.7);
-}
-
-button {
-  display: block;
-  margin-top: 10px;
-  width: 165px;
-}
+/* Кнопка "Начать" */ 
 
 .button {
   width: 100%;
