@@ -16,7 +16,7 @@ startButton.addEventListener("click", (event) => {
   if (columns >= 2 && columns <= 6 && columns % 2 == 0) {
     count = columns * columns;
   } else {
-    alert("Введите одно из чисел в заданном деапозоне(2 4 6)");
+    alert("Введите одно из чисел в заданном деапaзоне(2 4 6)");
     return;
   }
   createBoard(count, columns);
