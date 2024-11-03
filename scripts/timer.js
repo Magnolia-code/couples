@@ -1,12 +1,12 @@
 import { totalFlips } from "./gameLogic.js";
 
+let totalTime = 60;
 let intervalId;
 
-let totalTime = 60;
+function startTimer() {
+  const time = document.querySelector(".state__time");
+  const moves = document.querySelector(".state__moves");
 
-  function startTimer() {
-    const time = document.querySelector('.state__time');
-    const moves =  document.querySelector('state__moves');
   intervalId = setInterval(() => {
     totalTime--;
     moves.textContent = `Шаги: ${totalFlips} шагов`;
@@ -18,7 +18,7 @@ let totalTime = 60;
 }
 
 function stopTimer() {
-    clearInterval(intervalId);
-  }
-  
+  clearInterval(intervalId);
+}
+
 export { totalTime, startTimer, stopTimer }
